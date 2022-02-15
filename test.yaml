@@ -1,1 +1,5 @@
-{"info"=>{"levels"=>5, "practice"=>"stick handling/puck controll", "tools"=>"fasthands/puck/stick/gloves"}}
+---
+info:
+  levels: 5
+  practice: stick handling/puck controll
+  tools: fasthands/puck/stick/gloves
