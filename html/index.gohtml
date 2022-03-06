@@ -6,6 +6,17 @@
 </head>
 <body>
   <h1>FastHands - Let's Train!</h1>
-  <h1>{{ . }}</h1>
+  {{ range $k,$v := .FastHands }}
+    <div class="drill">
+      <h1>{{ $k }}</h1>
+      <ul>
+        <li>{{ $k }}</li>
+        <li>{{ $v.drill }}</li>
+        <li>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/pA8jfbHY8dQ?start={{ $v.drillStartsAt }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </li>
+      </ul>
+    </div>
+  {{ end }}
 </body>
 </html>

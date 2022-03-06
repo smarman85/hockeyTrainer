@@ -10,7 +10,7 @@ import (
 	"path/filepath"
 	"time"
 
-	// "hockeyTrainer/pkg/fastHands"
+	"hockeyTrainer/pkg/fastHands"
 
 	"github.com/gorilla/mux"
 )
@@ -56,11 +56,12 @@ func (h spaHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	// otherwise, use http.FileServer to serve the static dir
 	// fmt.Printf("staticPath: %s\n", h.staticPath)
 	// http.FileServer(http.Dir(h.staticPath)).ServeHTTP(w, r)
-	data := task{
-		workout: []int{1, 3, 4},
-	}
+	// data := task{
+	// 	workout: []int{1, 3, 4},
+	// }
+	drills, _ := fastHands.Run()
 	tmpl := template.Must(template.ParseFiles("html/index.gohtml"))
-	tmpl.Execute(w, data)
+	tmpl.Execute(w, drills)
 }
 
 func StartServer() {
