@@ -1,0 +1,101 @@
+Drills:
+  FastHands:
+    Wide & Short Dribble Combo:
+      drill:
+        - 1‐5, 5‐1, 1, 5, 5, 1, Repeat
+      drillStartsAt: 17
+    Bait Cup Go Around:
+      drill:
+        - 3, TD 3, Around, 1, 3, TD 3, 1, Around, Repeat
+      drillStartsAt: 34
+    Expansion Across:
+      drill:
+        - 1‐4, 4‐1, 1‐5, Reverse, 5‐2, 2‐5, 5‐1, Repeat
+      drillStartsAt: 55
+    V‐Pattern Drill:
+      drill:
+        - 2, 4, 5‐1, Repeat *Opposite direction 4, 2, 1‐5, Repeat
+      drillStartsAt: 77
+    X‐Pattern Drill:
+      drill:
+        - 1‐4, Over, 2‐5, 5‐2, Over, 4‐1, Repeat
+      drillStartsAt: 93
+    Toe Drag Backhand Toe Drag:
+      drill:
+        - TD 3, BTD 2, TD 3, BTD 1, Repeat
+      drillStartsAt: 112
+    Fake Pass Pull Through:
+      drill:
+        - Fake Pass, 4‐1, Fake Pass, BTD 5‐1, Repeat
+      drillStartsAt: 133
+    Forward Bring Back:
+      drill:
+        - 4‐1, 2, 3, Repeat
+      drillStartsAt: 147
+    Minnesota:
+      drill:
+        - TD 5, 5, 3, 4‐1, 4, 4, Repeat
+      drillStartsAt: 157
+    Z‐Pattern Drill:
+      drill:
+        - Over, 2, 4, 4, 2, Repeat
+      drillStartsAt: 172
+    Backhand Lateral Expansion:
+      drill:
+        - Over Wide, 2, 4, Over Wider, 1, 4, Repeat
+      drillStartsAt: 185
+    Behind Rotational Control:
+      drill:
+        - Backhand 2, TD 3, 2, TD 4, Repeat
+      drillStartsAt: 196
+    Quick Stick Figure 8:
+      drill:
+        - 5, 4, 1, 2, Repeat
+      drillStartsAt: 208
+    Wide Figure 8:
+      drill:
+        - Around, 1, Around, 5, Around, 2, Around, 4, Repeat
+      drillStartsAt: 227
+    Expansion of Reach:
+      drill:
+        - 2‐5, 4‐1, Repeat
+      drillStartsAt: 242
+    Fast Hands:
+      drill:
+        - 4, 4, 5, 5‐1, 1, Reverse, 2, 2, 1, 1‐5, 5, Repeat
+      drillStartsAt: 253
+    Small & Big Circle:
+      drill:
+        - 4, 2, 5‐1, Repeat *Opposite direction 2, 4, 1‐5, Repeat
+      drillStartsAt: 269
+    Accuracy:
+      drill:
+        - 4‐2, 2, TD 3, Reverse, 2‐4, 4, TD 3, Repeat
+      drillStartsAt: 282
+    Michigan:
+      drill:
+        - 4, 4, 3, 2, TD 1, 2, Repeat
+      drillStartsAt: 297
+    Quick Circles:
+      drill:
+        - 3, Around, 5, Around, 4, Around, 5, Repeat
+      drillStartsAt: 309
+    Toe Drag Transition:
+      drill:
+        - 3, TD 1, 2, 3, Repeat
+      drillStartsAt: 331
+    Backhand Toe Drag Deception:
+      drill:
+        - BTD 3, 2, 4, Around, Repeat
+      drillStartsAt: 345
+    Forehand Lateral Expansion:
+      drill:
+        - Pull Wide, 4, 2 Pull Wider, 5, 2, Repeat
+      drillStartsAt: 366
+    Lateral Control Forehand:
+      drill:
+        - 4, 3, TD 1, Forehand 4, 2, TD 1, Repeat
+      drillStartsAt: 385
+
+MetaData:
+  fastHandsYouTubeBaseUrl: https://youtu.be/pA8jfbHY8dQ?t=
