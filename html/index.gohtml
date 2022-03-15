@@ -7,20 +7,23 @@
 </head>
 <body>
   <h1>Let's Train!</h1>
-  <div class="row">
-  {{ range $k,$v := .FastHands }}
-    <div class="col p-4 m-4">
-      <h3>{{ $k }}</h3>
-      {{ range $i := $v.drill }}
-          <p>{{ $i }}</p>
-      {{ end }}
-      </ul>
-      <!-- <img src="/images/images/{{ $v.image_name }}"> -->
-      <div class="col-md-6">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/pA8jfbHY8dQ?start={{ $v.drillStartsAt }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <div class="container-fluid">
+    {{ range $k,$v := .FastHands }}
+    <div class="row">
+      <div class="col-sm">
+        <h3>{{ $k }}</h3>
+        {{ range $i := $v.drill }}
+            <p>{{ $i }}</p>
+        {{ end }}
+        <!-- <img src="/images/images/{{ $v.image_name }}"> -->
+      </div>
+      <div class="col-sm">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/pA8jfbHY8dQ?start={{ $v.drillStartsAt }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
-  {{ end }}
+    {{ end }}
   </div>
 </body>
 </html>
