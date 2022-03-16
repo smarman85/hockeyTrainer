@@ -127,19 +127,19 @@ MetaData:
 Weights:
   chest-arms:
     pushups: 34
-    curls: 25
-    tricepts: 35
-    wrist-extensions: 20
-    wrist-curls: 25
+    curls: 50
+    tricepts: 70
+    wrist-extensions: 40
+    wrist-curls: 50
   shoulders-back:
-    military-press: 55
-    16s: 20
-    bent-over-row: 65
+    military-press: 110
+    16s: 40
+    bent-over-row: 130
   legs:
-    squat: 90
-    calf-raises: 90
-    split-squat: 90
-    romanian-dead-lift: 40
+    squat: 180
+    calf-raises: 180
+    split-squat: 180
+    romanian-dead-lift: 80
     high-jump: 5X3
     back-jump-leap: 3X10
 
