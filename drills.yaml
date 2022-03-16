@@ -123,3 +123,25 @@ Drills:
 
 MetaData:
   fastHandsYouTubeBaseUrl: https://youtu.be/pA8jfbHY8dQ?t=
+
+Weights:
+  chest-arms:
+    pushups: 34
+    curls: 25
+    tricepts: 35
+    wrist-extensions: 20
+    wrist-curls: 25
+  shoulders-back:
+    military-press: 55
+    16s: 20
+    bent-over-row: 65
+  legs:
+    squat: 90
+    calf-raises: 90
+    split-squat: 90
+    romanian-dead-lift: 40
+    high-jump: 5X3
+    back-jump-leap: 3X10
+
+Cardio:
+  water-rower: 30
