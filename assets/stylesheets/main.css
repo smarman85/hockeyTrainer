@@ -1,0 +1,33 @@
+/*
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+    width: 100%;
+ }
+ 
+ body {
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
+ }
+
+ .container {
+     width: 100%;
+ }
+
+ .col {
+     width: 50%;
+     clear: both;
+     float: left;
+ }
+
+ .video {
+     background-color: blue;
+ }
+ .img {
+     background-color: green;
+ }
+ */
