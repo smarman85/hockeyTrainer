@@ -75,13 +75,17 @@ func StartServer() {
 	imageHandler := http.FileServer(http.Dir("./assets/"))
 	router.PathPrefix("/images/").Handler(http.StripPrefix("/images/", imageHandler))
 
+	assetHandler := http.FileServer(http.Dir("./assets/"))
+	assetHandler = http.StripPrefix("/assets/", assetHandler)
+	router.PathPrefix("/assets/").Handler(assetHandler)
+
 	//spa := spaHandler{staticPath: "html", indexPath: "index.gohtml"}
 	spa := spaHandler{staticPath: "html", indexPath: "index.html"}
 	router.PathPrefix("/").Handler(spa)
 
 	srv := &http.Server{
 		Handler: router,
-		Addr:    "0.0.0.0:8080",
+		Addr:    "0.0.0.0:8089",
 		// Good practice: enforce timeouts for servers you create!
 		WriteTimeout: 15 * time.Second,
 		ReadTimeout:  15 * time.Second,
