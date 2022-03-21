@@ -59,9 +59,9 @@ func (h spaHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	// data := task{
 	// 	workout: []int{1, 3, 4},
 	// }
-	drills, _ := fastHands.Run()
+	data := fastHands.Run()
 	tmpl := template.Must(template.ParseFiles("html/index.gohtml"))
-	tmpl.Execute(w, drills)
+	tmpl.Execute(w, data)
 }
 
 func StartServer() {

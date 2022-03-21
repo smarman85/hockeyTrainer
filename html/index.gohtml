@@ -9,6 +9,25 @@
 </head>
 <body>
   <h1>Let's Train!</h1>
+  <h2>Weights</h2>
+  <div class="container-fluid">
+    {{ range $k, $v := .Weights }}
+    <h3>{{ $k }}</h3>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        {{ range $i, $j := $v }}
+        <tr>
+            <td>{{ $i }}</td>
+            <td>{{ $j }}</td>
+        </tr>
+        {{ end }}
+        <tr></tr>
+        <tr></tr>
+      </table>
+    </div>
+    {{ end }}
+  </div>
+
   <h2>FastHands</h2>
   <div class="container-fluid">
     {{ range $k,$v := .FastHands }}

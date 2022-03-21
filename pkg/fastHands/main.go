@@ -1,7 +1,6 @@
 package fastHands
 
 import (
-	"fmt"
 	"io/ioutil"
 	"log"
 
@@ -9,12 +8,12 @@ import (
 )
 
 type Data struct {
-	Drills   map[string]map[string]map[string]interface{} `yaml:"Drills"`
-	MetaData map[string]string                            `yaml:"MetaData"`
+	FastHands map[string]map[string]interface{} `yaml:"FastHands"`
+	MetaData  map[string]string                 `yaml:"MetaData"`
+	Weights   map[string]map[string]interface{} `yaml:"Weights"`
 }
 
-func Run() (map[string]map[string]map[string]interface{}, map[string]string) {
-	fmt.Println("Fast hands")
+func Run() Data {
 	var data Data
 	yamlFile, err := ioutil.ReadFile("drills.yaml")
 	if err != nil {
@@ -26,8 +25,7 @@ func Run() (map[string]map[string]map[string]interface{}, map[string]string) {
 		log.Fatalf("Cant unmarshal yaml %v", err)
 	}
 
-	fmt.Println(data.Drills)
-	return data.Drills, data.MetaData
+	return data
 
 }
 

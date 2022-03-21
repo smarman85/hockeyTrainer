@@ -8,8 +8,7 @@ import (
 
 func main() {
 	fmt.Println("Let's Train!")
-	drills, metadata := fastHands.Run()
-	fmt.Println(drills)
-	fmt.Println(metadata)
+	// drills, _, _ := fastHands.Run()
+	fastHands.Run()
 	server.StartServer()
 }
