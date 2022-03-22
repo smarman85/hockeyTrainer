@@ -1,0 +1,86 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+  annotations:
+    app: hockeytrainer
+  name: hockeytrainer
+  clusterName: raspberrypi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hockeytrainer-svc
+  namespace: hockeytrainer
+  labels:
+    app: hockeytrainer
+spec:
+  ports:
+  - name: http
+    port: 8080
+    nodePort: 30082
+  selector:
+    app: hockeytrainer
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hockeytrainer
+  namespace: hockeytrainer
+  labels:
+    app: hockeytrainer
+  annotations:
+    app: hockeytrainer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hockeytrainer
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      name: hockeytrainer
+      namespace: hockeytrainer
+      labels:
+        app: hockeytrainer
+      annotations:
+        app: hockeytrainer
+    spec:
+      containers:
+      - name: hockeytrainer
+        image: smarman/hockeytrainer:0.0.1-arm
+          #command: ["sh", "-c", "tail -f /dev/null"]
+        command: ['./bin/run.sh']
+        imagePullPolicy: Always
+          #livenessProbe:
+          #  httpGet:
+          #    path: /about
+          #    port: 8080
+          #  initialDelaySeconds: 5
+          #  periodSeconds: 60
+        ports:
+        - containerPort: 8080
+        stdin: true
+        tty: true
+      restartPolicy: Always
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: hockeytrainer-ing
+  namespace: hockeytrainer
+spec:
+  rules:
+  - host: hockeytrainer.local.seanhome.xyz
+    http:
+      paths:
+      - backend: 
+          serviceName: hockeytrainer-svc
+          servicePort: http
+        path: /

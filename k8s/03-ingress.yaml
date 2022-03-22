@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: hockeytrainer-ing
+  namespace: hockeytrainer
+spec:
+  rules:
+  - host: hockeytrainer.local.seanhome.xyz
+    http:
+      paths:
+      - backend: 
+          serviceName: hockeytrainer-svc
+          servicePort: http
+        path: /
