@@ -85,7 +85,7 @@ func StartServer() {
 
 	srv := &http.Server{
 		Handler: router,
-		Addr:    "0.0.0.0:8089",
+		Addr:    "0.0.0.0:8080",
 		// Good practice: enforce timeouts for servers you create!
 		WriteTimeout: 15 * time.Second,
 		ReadTimeout:  15 * time.Second,
