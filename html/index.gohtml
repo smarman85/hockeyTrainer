@@ -8,8 +8,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#weights">Weights</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#fasthands">FastHands</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
   <h1>Let's Train!</h1>
-  <h2>Weights</h2>
+  <h2 id="weights">Weights</h2>
   <div class="container-fluid">
     {{ range $k, $v := .Weights }}
     <h3>{{ $k }}</h3>
@@ -28,7 +40,7 @@
     {{ end }}
   </div>
 
-  <h2>FastHands</h2>
+  <h2 id="fasthands">FastHands</h2>
   <div class="container-fluid">
     {{ range $k,$v := .FastHands }}
     <div class="row">
