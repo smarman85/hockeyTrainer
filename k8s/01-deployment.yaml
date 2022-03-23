@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: hockeytrainer
-        image: smarman/hockeytrainer:0.0.1-arm
+        image: smarman/hockeytrainer:0.0.3-arm
         command: ['./bin/run.sh']
         imagePullPolicy: Always
           #livenessProbe:
