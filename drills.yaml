@@ -126,14 +126,14 @@ MetaData:
 Weights:
   chest-arms:
     pushups: 34
-    curls: 50
-    tricepts: 70
+    curls: 60
+    tricepts: 80
     wrist-extensions: 50
     wrist-curls: 60
   shoulders-back:
-    military-press: 110
+    military-press: 140
     16s: 40
-    bent-over-row: 130
+    bent-over-row: 150
   legs:
     squat: 180
     calf-raises: 180
