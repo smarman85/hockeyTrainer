@@ -1,7 +1,12 @@
 #!/bin/bash
 
 APP=hockeytrainer
-containerCommit=$(docker ps -a | grep hokeytrainer | awk '{print $1}')
+
+docker rmi -f $APP
+
+docker build -t $APP
+
+containerCommit=$(docker ps -a | grep $APP | awk '{print $1}')
 VERSION=$1
 
 if [[ -z $VERSION  ]];
