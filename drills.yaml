@@ -131,14 +131,14 @@ Weights:
     wrist-extensions: 50
     wrist-curls: 60
   shoulders-back:
-    military-press: 110
+    military-press: 120
     16s: 40
-    bent-over-row: 150
+    bent-over-row: 160
   legs:
     squat: 180
     calf-raises: 180
     split-squat: 180
-    romanian-dead-lift: 80
+    romanian-dead-lift: 90
     high-jump: 5X3
     back-jump-leap: 3X10
 
