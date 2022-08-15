@@ -135,7 +135,8 @@ Weights:
     16s: 50
     bent-over-row: 160
   legs:
-    squat: 180
+    #squat: 180
+    side-lunges: 45X1
     calf-raises: 180
     split-squat: 180
     romanian-dead-lift: 90

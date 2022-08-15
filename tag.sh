@@ -2,9 +2,11 @@
 
 APP=hockeytrainer
 
+docker rm -f $APP
+
 docker rmi -f $APP
 
-docker build -t $APP
+docker build -t $APP .
 
 containerCommit=$(docker ps -a | grep $APP | awk '{print $1}')
 VERSION=$1
