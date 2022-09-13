@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.appName }}-svc
+  namespace: {{ .Values.appName }}
+  labels:
+    app: {{ .Values.appName }}
+spec:
+  ports:
+  - name: http
+    port: {{ .Values.image.portMapping }}
+    nodePort: {{ .Values.image.nodePort }}
+  selector:
+    app: {{ .Values.appName }}
+  type: NodePort

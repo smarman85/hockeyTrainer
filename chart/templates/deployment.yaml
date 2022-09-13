@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.appName }}
+  namespace: {{ .Values.appName }}
+  labels:
+    app: {{ .Values.appName }}
+  annotations:
+    app: {{ .Values.appName }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      name: {{ .Values.appName }}
+      namespace: {{ .Values.appName }}
+      labels:
+        app: {{ .Values.appName }}
+      annotations:
+        app: {{ .Values.appName }}
+    spec:
+      containers:
+      - name: {{ .Values.appName }}
+        image: {{ .Values.image.repository }}/{{ .Values.appName }}:{{ .Values.image.tag }}
+        command: [{{ .Values.image.command | quote }}]
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+          #livenessProbe:
+          #  httpGet:
+          #    path: /about
+          #    port: 8080
+          #  initialDelaySeconds: 5
+          #  periodSeconds: 60
+        ports:
+        - containerPort: {{ .Values.image.portMapping }}
+        stdin: true
+        tty: true
+        volumeMounts:
+        - name: config-volume
+          mountPath: /go/src/hockeytrainer
+      restartPolicy: {{ .Values.image.restartPolicy }}
+      volumes:
+        - name: config-volume
+          configMap:
+            name: {{ .Values.appName }}-cm
