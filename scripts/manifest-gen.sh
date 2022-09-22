@@ -1,3 +1,3 @@
 #!/bin/bash
 
-helm template ../chart > ../manifests/hockeytrainer-chart.yaml
+helm template ../chart --name-template=hockeytrainer > ../manifests/hockeytrainer-chart.yaml
