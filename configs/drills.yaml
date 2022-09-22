@@ -1,4 +1,3 @@
----
 FastHands:
   Wide & Short Dribble Combo:
     drill:
@@ -130,9 +129,9 @@ Weights:
     curls: 60
     tricepts: 80
     wrist-extensions: 50
-    wrist-curls: 70
+    wrist-curls: 60
   shoulders-back:
-    shrugs: 160
+    military-press: 120
     16s: 50
     bent-over-row: 160
   legs:
