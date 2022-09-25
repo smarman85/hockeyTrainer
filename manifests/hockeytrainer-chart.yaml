@@ -155,7 +155,7 @@ data:
           bent-over-row: 160
         legs:
           #squat: 180
-          side-lunges: 45X1
+          side-lunges: 90X1
           calf-raises: 180
           split-squat: 180
           romanian-dead-lift: 90
@@ -214,7 +214,7 @@ spec:
     spec:
       containers:
       - name: hockeytrainer
-        image: smarman/hockeytrainer:0.0.17-arm
+        image: smarman/hockeytrainer:0.0.19-arm
         command: ["./bin/run.sh"]
         imagePullPolicy: Always
           #livenessProbe:
