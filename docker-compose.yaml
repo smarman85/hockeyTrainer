@@ -15,8 +15,12 @@ services:
     labels:
       - "traefik.http.routers.hockey.rule=Host(`hockey.local.seanhome.xyz`)"
       - "traefik.http.services.hockey.loadbalancer.server.port=8080"
+    volumes:
+      - ./configs:/etc/configs/
 
-networks:
-  default:
-    external:
-      name: traefik_default
+# networks:
+#   default:
+#     external:
+#       name: traefik_default
+#volumes:
+#  configs:

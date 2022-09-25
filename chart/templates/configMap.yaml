@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: {{ .Values.appName }}-cm
+    namespace: {{ .Values.appName }}
+data:
+    {{- $files := .Files }}
+    {{- range .Values.configMapFiles }}
+    {{ . }}: |
+        {{ $files.Get . | indent 4 }}
+    {{- end }}

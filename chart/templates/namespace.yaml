@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+  annotations:
+    app: {{ .Values.appName }}
+  name: {{ .Values.appName }}
+  clusterName: {{ .Values.cluster }}
