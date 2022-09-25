@@ -1,3 +1,4 @@
 manifests/
 configs/
 scripts/
+./drills.yaml

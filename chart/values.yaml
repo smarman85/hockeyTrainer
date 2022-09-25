@@ -12,7 +12,7 @@ image:
   repository: smarman
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "0.0.16-arm"
+  tag: "0.0.17-arm"
   command: './bin/run.sh'
   portMapping: 8080
   restartPolicy: Always

@@ -164,6 +164,7 @@ data:
     
       Cardio:
         water-rower: 30
+        peloton: tabata
 ---
 # Source: chart/templates/service.yaml
 apiVersion: v1
@@ -213,7 +214,7 @@ spec:
     spec:
       containers:
       - name: hockeytrainer
-        image: smarman/hockeytrainer:0.0.18-arm
+        image: smarman/hockeytrainer:0.0.17-arm
         command: ["./bin/run.sh"]
         imagePullPolicy: Always
           #livenessProbe:
@@ -228,7 +229,7 @@ spec:
         tty: true
         volumeMounts:
         - name: config-volume
-          mountPath: /go/src/hockeytrainer
+          mountPath: /etc/configs
       restartPolicy: Always
       volumes:
         - name: config-volume

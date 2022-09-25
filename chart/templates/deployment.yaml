@@ -43,7 +43,7 @@ spec:
         tty: true
         volumeMounts:
         - name: config-volume
-          mountPath: /go/src/hockeytrainer
+          mountPath: /etc/configs
       restartPolicy: {{ .Values.image.restartPolicy }}
       volumes:
         - name: config-volume

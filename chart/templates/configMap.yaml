@@ -6,6 +6,6 @@ metadata:
 data:
     {{- $files := .Files }}
     {{- range .Values.configMapFiles }}
-    {{ . }}: |-
+    {{ . }}: |
         {{ $files.Get . | indent 4 }}
     {{- end }}
