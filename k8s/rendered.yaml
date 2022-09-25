@@ -235,17 +235,20 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+    kubernetes.io/ingress.class: public
   name: hockeytrainer-ing
   namespace: hockeytrainer
 spec:
-    rules:
-    - host: hockeytrainer.local.seanhome.xyz
-      http:
-        paths:
-        - backend:
-            service:
-              name: hockeytrainer-svc
-              port:
-                name: http
-          path: /
-          pathType: ImplementationSpecific
+  rules:
+  - http:
+      paths:
+      - path: / 
+        pathType: Prefix
+        backend:
+          service:
+            name: hockeytrainer-svc
+            port:
+              number: 8080
