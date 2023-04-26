@@ -11,6 +11,8 @@ type Data struct {
 	FastHands map[string]map[string]interface{} `yaml:"FastHands"`
 	MetaData  map[string]string                 `yaml:"MetaData"`
 	Weights   map[string]map[string]interface{} `yaml:"Weights"`
+  Drinks    map[string]map[string]interface{} `yaml:"Drinks"`
+  Misic     map[string]map[string]string      `yaml:"Misic"`
 }
 
 func Run() Data {

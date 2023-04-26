@@ -148,3 +148,22 @@ Weights:
 Cardio:
   water-rower: 30
   peloton: tabata
+
+Drinks:
+  mai-tai:
+    light-rum: 1oz
+    dark-rum: 1oz
+    curacao:  1/4oz
+    orgeat: 3/4oz
+    lime-juice: 3/4oz
+    directions:
+      - |
+        Pour light rum, curacao, orgeat, and lime juice into a shaker with lots of ice. Shake well 
+        for 30 seconds.
+      - |
+        Pour over ice and use a bar spoon to float the dark rum on the top.
+Misic:
+  hair:
+    beard: 5mm
+    eye-brows: 7mm
+    chest: #1 guard
